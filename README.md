@@ -53,6 +53,7 @@ Export Results: Save the clipped rasters and PNG visualizations for further use.
 PNG maps for elevation and slope with customized legends and color intervals
 
 📌 Applications
+
 Environmental impact studies
 
 Flood and landslide hazard assessments
