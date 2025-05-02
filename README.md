@@ -11,17 +11,17 @@ Reclassification of elevation and slope values into intervals
 
 Visualization using ggplot2 and RColorBrewer color palettes
 
-Exporting results to GeoTIFF and PNG formats
+Exporting results  PNG formats
 
 🛠️ Tools and Libraries Used
 R (programming language)
 
-raster, sf, ggplot2, tidyverse, classInt, RColorBrewer
+raster, sf, ggplot2, tidyverse, classInt, RColorBrewer, viridis
 
 🗺️ Data Sources
-DEM Data: SRTM 1 Arc-Second Global (NASA)
+DEM Data: Shuttle Radar Topography Mission (SRTM) Global link: https://opentopography.org/
 
-Administrative Boundaries: Shapefile of Chittagong District
+Administrative Boundaries: Shapefile of Chittagong District link: https://diva-gis.org/
 
 📊 Methodology
 Load and Process DEM: Import the DEM raster and crop it using the district boundary shapefile.
@@ -42,10 +42,13 @@ Visualize using the RdYlGn color palette.
 
 Export Results: Save the clipped rasters and PNG visualizations for further use.
 
-🖼️ Output
-clipped_dem_chittagong.tif
+### 🌄 Elevation Map
 
-clipped_slope_chittagong.tif
+![Elevation Map](elevation_map_chittagong.png)
+
+### ⛰️ Slope Map
+
+![Slope Map](Slope_map_chittagong.png)
 
 PNG maps for elevation and slope with customized legends and color intervals
 
