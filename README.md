@@ -63,6 +63,6 @@ Infrastructure development planning
 Land use suitability analysis
 
 📎 Credits
-Digital Elevation Data by NASA SRTM
+Digital Elevation Data by SRTM
 
 Shapefile data collected from local GIS sources or digitized
