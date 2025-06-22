@@ -10,13 +10,13 @@ library(ggspatial)# For RColorBrewer color scales
 # Load the DEM file
 dem <- raster("output_SRTMGL1.tif")  # Replace with the path to your DEM file
 
-# Load the Rathnapura district shapefile
+# Load the chittagong district shapefile
 ctg <- st_read("Chittagong dist.shp")  # Replace with the path to your shapefile
 
 # Ensure the DEM and shapefile have the same CRS
 ctg <- st_transform(Feni, crs = crs(dem))
 
-# Clip the DEM to the Rathnapura district boundary
+# Clip the DEM to the chittagong district boundary
 dem_ctg <- mask(crop(dem, ctg), Feni)
 
 # Save the clipped DEM as a TIFF file
