@@ -14,10 +14,10 @@ dem <- raster("output_SRTMGL1.tif")  # Replace with the path to your DEM file
 ctg <- st_read("Chittagong dist.shp")  # Replace with the path to your shapefile
 
 # Ensure the DEM and shapefile have the same CRS
-ctg <- st_transform(Feni, crs = crs(dem))
+ctg <- st_transformc(ctg, crs = crs(dem))
 
 # Clip the DEM to the chittagong district boundary
-dem_ctg <- mask(crop(dem, ctg), Feni)
+dem_ctg <- mask(crop(dem, ctg), ctg)
 
 # Save the clipped DEM as a TIFF file
 writeRaster(dem_ctg, "clipped_dem_feni.tif", overwrite = TRUE)
