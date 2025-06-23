@@ -13,13 +13,13 @@ dem <- raster("output_SRTMGL1.tif")  # Replace with the path to your DEM file
 # Calculate the slope from the DEM
 slope <- terrain(dem, opt = "slope", unit = "degrees")  # Calculate slope in degrees
 
-# Load the Rathnapura district shapefile
+# Load the Chittagong district shapefile
 ctg <- st_read("Chittagong dist.shp")  # Replace with the path to your shapefile
 
 # Ensure the DEM and shapefile have the same CRS
 ctg <- st_transform(ctg, crs = crs(slope))
 
-# Clip the slope raster to the Rathnapura district boundary
+# Clip the slope raster to the chittagong district boundary
 slope_ctg <- mask(crop(slope, ctg), ctg)
 
 # Save the clipped slope map as a TIFF file
