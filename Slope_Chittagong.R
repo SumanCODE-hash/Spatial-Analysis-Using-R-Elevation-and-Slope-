@@ -23,7 +23,7 @@ ctg <- st_transform(ctg, crs = crs(slope))
 slope_ctg <- mask(crop(slope, ctg), ctg)
 
 # Save the clipped slope map as a TIFF file
-writeRaster(slope_ctg, "slope_faridpur.tif", overwrite = TRUE)
+writeRaster(slope_ctg, "slope_chittagong.tif", overwrite = TRUE)
 
 # Convert the clipped slope raster to a data frame for ggplot2
 slope_df_clipped <- as.data.frame(slope_ctg, xy = TRUE)
